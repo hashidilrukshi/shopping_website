@@ -48,38 +48,31 @@ const NavBar = () => {
   const pathname = usePathname()
   
   const navItems = [
-    { name: 'HOME', href: '#home' },
-   
-    { name: "MEN'S", href: '#mens' },
-    { name: "WOMEN'S", href: '#womens' },
-    { name: 'JEWELRY', href: '#jewelry' },
-    { name: 'PERFUME', href: '#perfume' },
-    { name: 'HOT OFFERS', href: '#hot-offers' }
-  ]
+    { name: 'HOME', href: '/' },
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
-    e.preventDefault()
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start' 
-      })
-    }
-  }
+    { name: "MEN'S", href: '/mens' },
+    { name: "WOMEN'S", href: '/womens' },
+    { name: 'JEWELRY', href: '/jewelry' },
+    { name: 'PERFUME', href: '/perfume' },
+    { name: 'HOT OFFERS', href: '/hot-offers' }
+  ]
 
   return (
     <div className='hidden lg:block'>
       <div className='container'>
         <div className='flex w-fit gap-10 mx-auto font-medium py-4 text-blackish'>
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
-              className="navbar__link relative hover:text-pink-500 transition-colors duration-300 cursor-pointer after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-pink-500 after:transition-all after:duration-300 after:w-0 hover:after:w-full"
-              onClick={(e) => handleClick(e, item.href)}
+              href={item.href}
+              className={`navbar__link relative hover:text-pink-500 transition-colors duration-300 cursor-pointer ${
+                pathname === item.href 
+                  ? 'text-pink-500 after:w-full' 
+                  : 'after:w-0 hover:after:w-full'
+              } after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-pink-500 after:transition-all after:duration-300`}
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
