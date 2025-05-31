@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-const Footer = () => {
+const BottomNavBar = () => {
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white overflow-hidden">
       {/* Decorative Background Elements */}
@@ -33,8 +33,8 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Footer Links Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        {/* Footer Links Grid - Improved Alignment */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -43,10 +43,10 @@ const Footer = () => {
               </div>
               <h3 className="text-xl font-bold">StyleHub</h3>
             </div>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-400 leading-relaxed max-w-md">
               Your ultimate destination for fashion-forward clothing and accessories. Discover your unique style with our curated collections.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 pt-2">
               {/* Social Media Icons */}
               <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-pink-500 transition-colors duration-300">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -60,55 +60,28 @@ const Footer = () => {
               </a>
               <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-pink-500 transition-colors duration-300">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12.165 21.667c-1.605 0-3.165-.748-4.156-2.059-.574-.759-.594-1.687-.594-2.585V9.465c0-.898.02-1.826.594-2.585.991-1.311 2.551-2.059 4.156-2.059s3.165.748 4.156 2.059c.574.759.594 1.687.594 2.585v7.558c0 .898-.02 1.826-.594 2.585-.991 1.311-2.551 2.059-4.156 2.059zm0-1.414c1.165 0 2.293-.574 2.917-1.496.311-.461.394-1.001.394-1.734V9.465c0-.733-.083-1.273-.394-1.734C14.458 6.809 13.33 6.235 12.165 6.235s-2.293.574-2.917 1.496c-.311.461-.394 1.001-.394 1.734v7.558c0 .733.083 1.273.394 1.734.624.922 1.752 1.496 2.917 1.496z"/>
-                  <path d="M18.406 4.594c.39.39.39 1.024 0 1.414l-1.4 1.4c-.39.39-1.024.39-1.414 0-.39-.39-.39-1.024 0-1.414l1.4-1.4c.39-.39 1.024-.39 1.414 0zM8.008 15.008c.39.39.39 1.024 0 1.414l-1.4 1.4c-.39.39-1.024.39-1.414 0-.39-.39-.39-1.024 0-1.414l1.4-1.4c.39-.39 1.024-.39 1.414 0z"/>
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                 </svg>
               </a>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-pink-400">Quick Links</h4>
-            <ul className="space-y-2">
-              {['New Arrivals', 'Best Sellers', 'Sale Items', 'Gift Cards', 'Size Guide'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block">
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Categories */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-purple-400">Categories</h4>
-            <ul className="space-y-2">
-              {['Women\'s Fashion', 'Men\'s Fashion', 'Accessories', 'Shoes', 'Bags'].map((category) => (
-                <li key={category}>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block">
-                    {category}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
+          {/* Contact Info - Better Alignment */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-blue-400">Get In Touch</h4>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center">
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                   </svg>
                 </div>
-                <span className="text-gray-400">Colombo, Sri Lanka</span>
+                <div className="flex-1">
+                  <span className="text-gray-400 block">123 Fashion Street<br />Colombo 03, Sri Lanka</span>
+                </div>
               </div>
               <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                   </svg>
@@ -116,7 +89,7 @@ const Footer = () => {
                 <span className="text-gray-400">+94 123 456 789</span>
               </div>
               <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                   </svg>
@@ -127,25 +100,28 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center space-x-6 mb-4 md:mb-0">
-            <p className="text-gray-400">© 2024 StyleHub. All rights reserved.</p>
-            <div className="flex space-x-4 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+        {/* Bottom Bar - Improved Alignment */}
+        <div className="border-t border-white/10 pt-8">
+          <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
+            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+              <p className="text-gray-400 text-center sm:text-left">© 2025 StyleHub. All rights reserved.</p>
+              <div className="flex space-x-4 text-sm">
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                <span className="text-gray-600">•</span>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+              </div>
             </div>
-          </div>
-          
-          {/* Payment Methods */}
-          <div className="flex items-center space-x-4">
-            <span className="text-gray-400 text-sm">We Accept:</span>
-            <div className="flex space-x-2">
-              {['VISA', 'MC', 'AMEX', 'PP'].map((payment) => (
-                <div key={payment} className="w-10 h-6 bg-white/10 rounded flex items-center justify-center text-xs font-bold">
-                  {payment}
-                </div>
-              ))}
+            
+            {/* Payment Methods - Better Alignment */}
+            <div className="flex items-center space-x-4">
+              <span className="text-gray-400 text-sm">We Accept:</span>
+              <div className="flex space-x-2">
+                {['VISA', 'MC', 'AMEX', 'PP'].map((payment) => (
+                  <div key={payment} className="w-10 h-6 bg-white/10 rounded flex items-center justify-center text-xs font-bold text-gray-300">
+                    {payment}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -159,4 +135,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default BottomNavBar

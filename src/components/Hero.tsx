@@ -24,25 +24,19 @@ const Hero =() => {
     },
     {
         id: 1,
-        img: "/1.PNG",  // Remove "/public" from the path
+        img: "/2.PNG",  // Remove "/public" from the path
         title: "Trending Item",
         mainTitle: "WOMEN'S LATEST FASHION SALE",
         price: "Rs.20"
     },
     {
         id: 2,
-        img: "/1.PNG",  // Remove "/public" from the path
-        title: "Trending Item",
-        mainTitle: "WOMEN'S LATEST FASHION SALE",
-        price: "Rs.20"
-    },
-    {
-        id: 3,
-        img: "/1.PNG",  // Remove "/public" from the path
+        img: "/3.PNG",  // Remove "/public" from the path
         title: "Trending Item",
         mainTitle: "WOMEN'S LATEST FASHION SALE",
         price: "Rs.20"
     }
+   
 ];
 
   return (

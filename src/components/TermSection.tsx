@@ -14,7 +14,7 @@ const TestimonialSection = () => {
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 rounded-full border-4 border-pink-200 overflow-hidden">
                 <Image
-                  src="/1.PNG"
+                  src="/girl.PNG"
                   alt="Elsa Doe"
                   width={80}
                   height={80}

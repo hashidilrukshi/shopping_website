@@ -7,7 +7,7 @@ interface Product {
     title: string;
     desc: string;
     rating: number;
-    price: string;
+    price: number;
 }
 
 const ProductCard: React.FC<Product> = ({ img, title, desc, rating, price }) => {
